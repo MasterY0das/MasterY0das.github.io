@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magnet Platformer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        canvas {
+            background: #000;
+            border: 4px solid #fff;
+            image-rendering: pixelated;
+        }
+        #homeScreen {
+            position: absolute;
+            width: 1200px;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Press Start 2P';
+            z-index: 100;
+        }
+        .menu-item {
+            margin: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 2px solid white;
+            transition: all 0.3s;
+        }
+        .menu-item:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="homeScreen">
+        <h1>MAGNET PLATFORMER</h1>
+        <div class="menu-item" id="startGame">START GAME</div>
+        <div class="menu-item" id="controls">HOW TO PLAY</div>
+    </div>
+    <canvas id="gameCanvas" width="1200" height="600"></canvas>
+    <script src="magnetgame.js"></script>
+</body>
+</html>
